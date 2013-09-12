@@ -6,6 +6,9 @@ Training materials for Bioconductor courses in Longwood area, Boston MA
 October 10-11 2013, Fenway Room, Inn at Longwood
 432 Longwood Ave Boston MA 02115
 
+Day 1
+=====
+
  * Lecture 1: Pitfalls of genomic data analysis.
   Complexity, poor design, batch effects
 
@@ -35,5 +38,17 @@ October 10-11 2013, Fenway Room, Inn at Longwood
      - censored response
      - correlated response
    + Shrinkage concepts for high-dimensional data
-   + Visualizations and reports
+   + Visualizations and reports: standard, "shiny", ReportingToolskkkkkkkkkk
 
+ * Lab 3: Statistical explorations of genomic data
+
+Day 2
+=====
+ * Lecture 3: R and Bioconductor for high-throughput computing
+
+ * Lab 4: Case studies
+   + Microarray differential expression
+   + Differential methylation
+   + RNA-seq, DESeq
+   + ChIP-seq, DiffBind
+   + Integrative analyses
