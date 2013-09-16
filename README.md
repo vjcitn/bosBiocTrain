@@ -13,14 +13,14 @@ Day 1
   Complexity, poor design, batch effects.  Vehicles for
   avoiding some of the pitfalls with Bioconductor.
 
- * Lab 1: Managing genomic annotation for humand and model organisms
-   + OrganismDbi, select
-   + GenomicRanges
+ * Lab 1: Managing genomic annotation for human and model organisms
+   + _OrganismDbi_, _select_
+   + _GenomicRanges_
 
  * Lab 2: Managing and using experimental archives
-   + General principle: X[G, S] is selection of genomic features G
-    and experimental samples S from archive X
-   + Archive containers: ExpressionSet, SummarizedExperiment
+   + General principle: `X[G, S]` is selection of genomic features `G`
+    and experimental samples `S` from archive `X`
+   + Archive containers: `ExpressionSet`, `SummarizedExperiment`
    + Getting acquainted with some classic experiments
      - Expression arrays
      - Methylation arrays
@@ -53,6 +53,6 @@ Day 2
  * Lab 4: Case studies
    + Microarray differential expression
    + Differential methylation
-   + RNA-seq, DESeq
-   + ChIP-seq, bsseq, DiffBind
+   + RNA-seq, _DESeq_
+   + ChIP-seq, _bsseq_, _DiffBind_
    + Integrative analyses
