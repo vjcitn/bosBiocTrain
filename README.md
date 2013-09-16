@@ -18,9 +18,9 @@ Day 1
 
  * Lab 1: Managing genomic annotation for human and model organisms
    + [_OrganismDbi_](http://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html), `select`
-   + [_GenomicRanges_](http://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html)
+   + [_GenomicRanges_](http://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html) and see [the recent PLoS CompBio paper](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118)
 
- * Lab 2: Managing and using experimental archives
+ * [Lab 2: Managing and using experimental archives](ArchiveLab/archive.Rnw.html)
    + General principle: `X[G, S]` is selection of genomic features `G`
     and experimental samples `S` from archive `X`
    + Archive containers: `ExpressionSet`, `SummarizedExperiment`
