@@ -10,9 +10,10 @@ Day 1
 =====
 
  * Lecture 1: Pitfalls of genomic data analysis.
-  Complexity, poor design, batch effects
+  Complexity, poor design, batch effects.  Vehicles for
+  avoiding some of the pitfalls with Bioconductor.
 
- * Lab 1: Managing genomic annotation for model organism
+ * Lab 1: Managing genomic annotation for humand and model organisms
    + OrganismDbi, select
    + GenomicRanges
 
@@ -38,9 +39,12 @@ Day 1
      - censored response
      - correlated response
    + Shrinkage concepts for high-dimensional data
-   + Visualizations and reports: standard, "shiny", ReportingToolskkkkkkkkkk
+   + Visualizations and reports: standard, "shiny", ReportingTools
 
- * Lab 3: Statistical explorations of genomic data
+ * Lab 3: Statistical explorations of genomic data: interfaces
+for exploratory multivariate analysis, machine learning,
+multiple comparisons, enumerating significantly distinctive
+features, functional interpretation of feature sets
 
 Day 2
 =====
@@ -50,5 +54,5 @@ Day 2
    + Microarray differential expression
    + Differential methylation
    + RNA-seq, DESeq
-   + ChIP-seq, DiffBind
+   + ChIP-seq, bsseq, DiffBind
    + Integrative analyses
