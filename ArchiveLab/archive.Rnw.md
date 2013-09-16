@@ -1,6 +1,3 @@
-%\VignetteIndexEntry{test rnw vignette}
-%\VignetteEngine{knitr::knitr}
-
 
 <h2>Representing genome-scale data with R</h2>
 
