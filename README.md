@@ -55,7 +55,7 @@ Day 2
 
  * Lab 4: Case studies
    + Microarray differential expression
-   + Differential methylation
+   + Differential methylation, _bsseq_
    + RNA-seq, _DESeq_
-   + ChIP-seq, _bsseq_, _DiffBind_
+   + ChIP-seq, _DiffBind_
    + Integrative analyses
