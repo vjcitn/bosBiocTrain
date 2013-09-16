@@ -20,7 +20,7 @@ Day 1
    + [_OrganismDbi_](http://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html), `select`
    + [_GenomicRanges_](http://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html) and see [the recent PLoS CompBio paper](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118)
 
- * [Lab 2: Managing and using experimental archives](ArchiveLab/archive.Rnw.html)
+ * [Lab 2: Managing and using experimental archives](ArchiveLab/archive.Rnw.md)
    + General principle: `X[G, S]` is selection of genomic features `G`
     and experimental samples `S` from archive `X`
    + Archive containers: `ExpressionSet`, `SummarizedExperiment`
