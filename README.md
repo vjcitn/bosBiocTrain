@@ -18,7 +18,8 @@ Day 1
 
  * Lecture 1: Pitfalls of genomic data analysis.
   Complexity, poor design, batch effects.  Vehicles for
-  avoiding some of the pitfalls with Bioconductor.
+  avoiding some of the pitfalls with Bioconductor.  Approaches
+  to systematic version control and literate data analysis.
 
  * [Lab 1: Managing genomic annotation for human and model organisms](AnnotationLab/anno.Rnw.md)
    + [_OrganismDbi_](http://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html), `select`
