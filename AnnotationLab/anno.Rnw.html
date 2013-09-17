@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Annotation: genes, etc.</title>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h2>Annotation: genes, etc.</h2>
+
+<h3>Prologue: programming with genomic coordinates</h3>
+
+<p>We would like to be able to consistently describe the
+positions on the genome of various genomic and genetic
+features.  The assembly of the human genome reference known
+as GRCh37 (build 37 of the Genome Reference Consortium) is
+also known as hg19 in nomenclature established in the UCSC
+Genome Bioinformatics Group.  When referring to a genomic position,
+it is essential to know which reference has been used to
+define the address.  This is often not done: metadata defining
+the context of positions is not concretely available, and
+implicit understanding is assumed, necessitating checking
+in case uncertainty is present.  It is good to be able to check:
+Bioconductor SNPlocs packages have a long history and can
+be used to verify, for SNP location assertions, which
+genome build is in play.  However, it is better to use
+objects that are self-describing and explicitly identify
+the address basis.</p>
+
+<p>Perhaps the most basic resource for working with
+genomic content is the reference sequence itself.  We will
+postpone this and work with higher-level concepts such
+as organisms, genes, transcripts.</p>
+
+<h3>Genes and functional annotation, OrganismDbi</h3>
+
+<h4>Overview</h4>
+
+<p>The OrganismDbi infrastructure defines relationships between
+annotation resources useful in analyzing annotations for a specific
+organism.</p>
+
+<pre><code class="r">library(Homo.sapiens)
+</code></pre>
+
+<pre><code>## Loading required package: AnnotationDbi Loading required package:
+## BiocGenerics Loading required package: parallel
+## 
+## Attaching package: &#39;BiocGenerics&#39;
+## 
+## The following objects are masked from &#39;package:parallel&#39;:
+## 
+## clusterApply, clusterApplyLB, clusterCall, clusterEvalQ, clusterExport,
+## clusterMap, parApply, parCapply, parLapply, parLapplyLB, parRapply,
+## parSapply, parSapplyLB
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+## xtabs
+## 
+## The following objects are masked from &#39;package:base&#39;:
+## 
+## anyDuplicated, append, as.data.frame, as.vector, cbind, colnames,
+## duplicated, eval, Filter, Find, get, intersect, lapply, Map, mapply,
+## match, mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+## rbind, Reduce, rep.int, rownames, sapply, setdiff, sort, table, tapply,
+## union, unique, unlist
+## 
+## Loading required package: Biobase Welcome to Bioconductor
+## 
+## Vignettes contain introductory material; view with &#39;browseVignettes()&#39;. To
+## cite Bioconductor, see &#39;citation(&quot;Biobase&quot;)&#39;, and for packages
+## &#39;citation(&quot;pkgname&quot;)&#39;.
+## 
+## Loading required package: OrganismDbi Loading required package:
+## GenomicFeatures Loading required package: IRanges Loading required
+## package: GenomicRanges Loading required package: XVector Loading required
+## package: GO.db Loading required package: DBI
+## 
+## Loading required package: org.Hs.eg.db
+## 
+## Loading required package: TxDb.Hsapiens.UCSC.hg19.knownGene
+</code></pre>
+
+<pre><code class="r">Homo.sapiens
+</code></pre>
+
+<pre><code>## class: OrganismDb 
+## Annotation resources:
+## [1] &quot;GO.db&quot;                             &quot;org.Hs.eg.db&quot;                     
+## [3] &quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot;
+## Annotation relationships:
+##      xDbs           yDbs                                xKeys     
+## [1,] &quot;GO.db&quot;        &quot;org.Hs.eg.db&quot;                      &quot;GOID&quot;    
+## [2,] &quot;org.Hs.eg.db&quot; &quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot; &quot;ENTREZID&quot;
+##      yKeys   
+## [1,] &quot;GO&quot;    
+## [2,] &quot;GENEID&quot;
+## For more details, please see the show methods for the component objects listed above.
+</code></pre>
+
+<p>We see that the critical components of Homo.sapiens annotation
+are 
+org.Hs.eg.db.<br/>
+TxDb.Hsapiens&hellip;,  and
+GO.db.
+These address, respectively,
+institutional cataloging and nomenclature
+for genes, structural addressing of transcripts
+and gene models, and functional, process, and anatomic classification
+of genes and gene products.</p>
+
+<p>Considerable metadata is provided for each resource.  For example,</p>
+
+<pre><code class="r">GO.db
+</code></pre>
+
+<pre><code>## GODb object:
+## | GOSOURCENAME: Gene Ontology
+## | GOSOURCEURL: ftp://ftp.geneontology.org/pub/go/godatabase/archive/latest-lite/
+## | GOSOURCEDATE: 20130302
+## | Db type: GODb
+## | package: AnnotationDbi
+## | DBSCHEMA: GO_DB
+## | GOEGSOURCEDATE: 2013-Mar5
+## | GOEGSOURCENAME: Entrez Gene
+## | GOEGSOURCEURL: ftp://ftp.ncbi.nlm.nih.gov/gene/DATA
+## | DBSCHEMAVERSION: 2.1
+</code></pre>
+
+<h4>Lookups</h4>
+
+<p>A general task is taking a set of keys and finding their correspondences
+in other resources.
+The columns&#39; define names for
+attributes of genomic elements that can be
+used as types or tokens of keys or types of values to be requested.</p>
+
+<pre><code class="r">sort(columns(Homo.sapiens))
+</code></pre>
+
+<pre><code>##  [1] &quot;ACCNUM&quot;       &quot;ALIAS&quot;        &quot;CDSCHROM&quot;     &quot;CDSEND&quot;      
+##  [5] &quot;CDSID&quot;        &quot;CDSNAME&quot;      &quot;CDSSTART&quot;     &quot;CDSSTRAND&quot;   
+##  [9] &quot;CHR&quot;          &quot;CHRLOC&quot;       &quot;CHRLOCEND&quot;    &quot;DEFINITION&quot;  
+## [13] &quot;ENSEMBL&quot;      &quot;ENSEMBLPROT&quot;  &quot;ENSEMBLTRANS&quot; &quot;ENTREZID&quot;    
+## [17] &quot;ENZYME&quot;       &quot;EVIDENCE&quot;     &quot;EVIDENCEALL&quot;  &quot;EXONCHROM&quot;   
+## [21] &quot;EXONEND&quot;      &quot;EXONID&quot;       &quot;EXONNAME&quot;     &quot;EXONRANK&quot;    
+## [25] &quot;EXONSTART&quot;    &quot;EXONSTRAND&quot;   &quot;GENEID&quot;       &quot;GENENAME&quot;    
+## [29] &quot;GO&quot;           &quot;GOALL&quot;        &quot;GOID&quot;         &quot;IPI&quot;         
+## [33] &quot;MAP&quot;          &quot;OMIM&quot;         &quot;ONTOLOGY&quot;     &quot;ONTOLOGYALL&quot; 
+## [37] &quot;PATH&quot;         &quot;PFAM&quot;         &quot;PMID&quot;         &quot;PROSITE&quot;     
+## [41] &quot;REFSEQ&quot;       &quot;SYMBOL&quot;       &quot;TERM&quot;         &quot;TXCHROM&quot;     
+## [45] &quot;TXEND&quot;        &quot;TXID&quot;         &quot;TXNAME&quot;       &quot;TXSTART&quot;     
+## [49] &quot;TXSTRAND&quot;     &quot;UCSCKG&quot;       &quot;UNIGENE&quot;      &quot;UNIPROT&quot;
+</code></pre>
+
+<pre><code class="r">s1 = AnnotationDbi::select(Homo.sapiens, keytype = &quot;SYMBOL&quot;, keys = c(&quot;ABL1&quot;, 
+    &quot;BRCA2&quot;), columns = c(&quot;UNIGENE&quot;, &quot;ENTREZID&quot;, &quot;UNIPROT&quot;, &quot;ENSEMBL&quot;, &quot;ENSEMBLPROT&quot;, 
+    &quot;ENSEMBLTRANS&quot;))
+</code></pre>
+
+<pre><code>## Warning: You have selected the following columns that can have a many to
+## one relationship with the primary key: UNIGENE, ENSEMBL, ENSEMBLPROT,
+## ENSEMBLTRANS, UNIPROT . Because you have selected more than a few such
+## columns there is a risk that this selection may balloon up into a very
+## large result as the number of rows returned multiplies accordingly. To
+## experience smaller/more manageable results and faster retrieval times, you
+## might want to consider selecting these columns separately. Warning:
+## &#39;select&#39; resulted in 1:many mapping between keys and return rows Warning:
+## &#39;select&#39; resulted in 1:many mapping between keys and return rows
+</code></pre>
+
+<pre><code class="r">dim(s1)
+</code></pre>
+
+<pre><code>## [1] 48  7
+</code></pre>
+
+<pre><code class="r">s1[!duplicated(s1$SYMBOL), ]
+</code></pre>
+
+<pre><code>##    SYMBOL ENTREZID   UNIGENE         ENSEMBL     ENSEMBLPROT
+## 1    ABL1       25 Hs.431048 ENSG00000097007 ENSP00000361423
+## 19  BRCA2      675  Hs.34012 ENSG00000139618 ENSP00000369497
+##       ENSEMBLTRANS UNIPROT
+## 1  ENST00000372348  P00519
+## 19 ENST00000380152  P51587
+</code></pre>
+
+<p>Entrez gene identifiers are simple integers.  For working with
+homology annotation resources it is useful to be acquainted with
+Ensembl gene, transcript, and protein identifiers.</p>
+
+<h3>Gene models and genomic coordinates: TranscriptDb</h3>
+
+<p>To acquire coordinates of transcripts and exons, we use
+a TranscriptDb instance.
+The query is posed in terms of the target resource (here the hg19
+UCSC transcript set), a <code>vals</code> specification (we give a binding
+to <code>gene_id}) and what we want back, in \texttt{col</code>.  We will get
+a <code>GRanges</code> instance with metadata.</p>
+
+<pre><code class="r">txdb = TxDb.Hsapiens.UCSC.hg19.knownGene
+tsel = transcripts(txdb, vals = list(gene_id = unique(s1$ENTREZID)), col = c(&quot;gene_id&quot;, 
+    &quot;tx_id&quot;, &quot;tx_name&quot;))
+tsel
+</code></pre>
+
+<pre><code>## GRanges with 4 ranges and 3 metadata columns:
+##       seqnames                 ranges strand |         gene_id     tx_id
+##          &lt;Rle&gt;              &lt;IRanges&gt;  &lt;Rle&gt; | &lt;CharacterList&gt; &lt;integer&gt;
+##   [1]    chr13 [ 32889617,  32907524]      + |             675     48293
+##   [2]    chr13 [ 32889617,  32973809]      + |             675     48294
+##   [3]     chr9 [133589268, 133763062]      + |              25     34764
+##   [4]     chr9 [133710831, 133763062]      + |              25     34765
+##           tx_name
+##       &lt;character&gt;
+##   [1]  uc001uua.1
+##   [2]  uc001uub.1
+##   [3]  uc004bzv.3
+##   [4]  uc004bzw.3
+##   ---
+##   seqlengths:
+##                    chr1                 chr2 ...       chrUn_gl000249
+##               249250621            243199373 ...                38502
+</code></pre>
+
+<p>The <emph>Rsamtools</emph> vignette illustrates a procedure for
+creating a focused transcript set based on EBI biomart queries.
+Here we obtain Entrez IDs for genes related to caffeine metabolism,
+translate the feature names to ENSEMBL, and then create the
+transcript database.  This requires internet connectivity and
+nontrivial data interchange,
+so is suppressed.</p>
+
+<pre><code class="r">library(KEGG.db)
+kid &lt;- revmap(KEGGPATHID2NAME)[[&quot;Caffeine metabolism&quot;]]
+egid &lt;- KEGGPATHID2EXTID[[sprintf(&quot;hsa%s&quot;, kid)]]
+library(biomaRt)
+mart &lt;- useMart(&quot;ensembl&quot;, &quot;hsapiens_gene_ensembl&quot;)
+ensid &lt;- getBM(c(&quot;ensembl_transcript_id&quot;), filters = &quot;entrezgene&quot;, values = egid, 
+    mart = mart)
+library(GenomicFeatures)
+txdb.caf &lt;- makeTranscriptDbFromBiomart(transcript_ids = ensid)
+transcripts(txdb.caf)
+</code></pre>
+
+<p>Partial result:</p>
+
+<pre>
+> transcripts(txdb.caf)
+GRanges with 22 ranges and 2 metadata columns:
+       seqnames               ranges strand   |     tx_id         tx_name
+          <Rle>            <IRanges>  <Rle>   | <integer>     <character>
+   [1]       15 [75041185, 75048543]      +   |        18 ENST00000343932
+   [2]       19 [41594368, 41602099]      +   |        19 ENST00000330436
+   [3]       19 [41349444, 41356352]      -   |        20 ENST00000301141
+   [4]       19 [41381344, 41388657]      -   |        21 ENST00000291764
+   [5]       19 [41381344, 41388657]      -   |        22 ENST00000301146
+</pre>
+
+<p>Exercise: Generalize the code above so that transcript sets
+for arbitrary user-selected KEGG pathways are returned.
+Introduce an option to use KEGGREST to retrieve the pathway
+constituents.</p>
+
+<h3>Gene sets</h3>
+
+<p>Any vector of identifiers can represent a gene set.  A more formal
+approach to managing information on gene sets is given in the 
+<emph>GSEABase</emph> package, which is intended as infrastructure
+for gene set enrichment testing.</p>
+
+<p>In the following code, we use built-in data extracted from Broad Institute
+MSIGDB to obtain a &ldquo;set collection&#39;&#39; representing two cytobands.</p>
+
+<pre><code class="r">library(GSEABase)
+</code></pre>
+
+<pre><code>## Loading required package: annotate Loading required package: graph
+</code></pre>
+
+<pre><code class="r">fl &lt;- system.file(&quot;extdata&quot;, &quot;Broad.xml&quot;, package = &quot;GSEABase&quot;)
+gs &lt;- getBroadSets(fl)
+gs
+</code></pre>
+
+<pre><code>## GeneSetCollection
+##   names: chr5q23, chr16q24 (2 total)
+##   unique identifiers: ZNF474, CCDC100, ..., TRAPPC2L (215 total)
+##   types in collection:
+##     geneIdType: SymbolIdentifier (1 total)
+##     collectionType: BroadCollection (1 total)
+</code></pre>
+
+<pre><code class="r">names(gs)
+</code></pre>
+
+<pre><code>## [1] &quot;chr5q23&quot;  &quot;chr16q24&quot;
+</code></pre>
+
+<pre><code class="r">sapply(gs, function(x) length(geneIds(x)))
+</code></pre>
+
+<pre><code>## [1]  86 129
+</code></pre>
+
+<p>Let&#39;s obtain the transcript GRanges for all the genes in \Sexpr{names(gs)[1]}.
+First we&#39;ll get the Entrez IDs.</p>
+
+<pre><code class="r">egs = gs[[1]]
+geneIdType(egs)
+</code></pre>
+
+<pre><code>## geneIdType: Symbol
+</code></pre>
+
+<pre><code class="r">SymbolIdentifier(&quot;ENTREZID&quot;)
+</code></pre>
+
+<pre><code>## geneIdType: Symbol (ENTREZID)
+</code></pre>
+
+<pre><code class="r">geneIdType(egs) = EntrezIdentifier(&quot;org.Hs.eg.db&quot;)
+egs
+</code></pre>
+
+<pre><code>## setName: chr5q23 
+## geneIds: 133923, 9542, ..., 728586 (total: 58)
+## geneIdType: EntrezId (org.Hs.eg.db)
+## collectionType: Broad
+##   bcCategory: c1 (Positional)
+##   bcSubCategory:  NA
+## details: use &#39;details(object)&#39;
+</code></pre>
+
+<p>Notice the loss of tokens after the transformation.
+With these, we call into transcripts again:</p>
+
+<pre><code class="r">tsel2 = transcripts(txdb, vals = list(gene_id = unique(geneIds(egs))), col = c(&quot;gene_id&quot;, 
+    &quot;tx_id&quot;, &quot;tx_name&quot;))
+length(tsel2)
+</code></pre>
+
+<pre><code>## [1] 128
+</code></pre>
+
+<pre><code class="r">tsel2[1:3]
+</code></pre>
+
+<pre><code>## GRanges with 3 ranges and 3 metadata columns:
+##       seqnames               ranges strand |         gene_id     tx_id
+##          &lt;Rle&gt;            &lt;IRanges&gt;  &lt;Rle&gt; | &lt;CharacterList&gt; &lt;integer&gt;
+##   [1]     chr5 [52285156, 52390609]      + |            3673     20026
+##   [2]     chr5 [52285156, 52390609]      + |            3673     20027
+##   [3]     chr5 [52285156, 52390609]      + |            3673     20028
+##           tx_name
+##       &lt;character&gt;
+##   [1]  uc003joy.3
+##   [2]  uc011cqa.2
+##   [3]  uc011cqb.2
+##   ---
+##   seqlengths:
+##                    chr1                 chr2 ...       chrUn_gl000249
+##               249250621            243199373 ...                38502
+</code></pre>
+
+<p>Exercise.  Create a function that takes a GeneSet instance and returns the
+ranges of all transcripts in the set.  Allow an option to reduce the
+ranges to gene regions&#39;&#39;.</p>
+
+<p>Redistribution of Broad MSIGDB is not permitted, but you can register to get
+your own copy.</p>
+
+<p>\includegraphics{msigFly}</p>
+
+<p>Once you&#39;ve acquired, e.g., the XML for the MSIGDB 3.1, the <code>getBroadSets</code> function can be used to obtain
+a formal GeneSetCollection object representing the whole collection.  The resulting object can then be saved
+for reuse.</p>
+
+<pre>
+bash-3.2$ ls -tl ~/Downloads/m*xml
+-rw-r--r--@ 1 stvjc  staff  50648647 Mar 16 07:43 /Users/stvjc/Downloads/msigdb_v3.1.xml
+# in R: is not fast
+msig3.1 = getBroadSets("/Users/stvjc/Downloads/msigdb_v3.1.xml")
+save(msig3.1, file="msig3.1.rda")
+## check size
+bash-3.2$ ls -tl msig3.1.rda
+-rw-r--r--  1 stvjc  staff  6227937 Mar 16 07:49 msig3.1.rda
+</pre>
+
+<p>Here are some basic exploratory tasks, which you can&#39;t carry out unless you&#39;ve
+registered and acquired the MSIGDB as noted above.</p>
+
+<pre>
+> msig3.1
+GeneSetCollection
+  names: NUCLEOPLASM, EXTRINSIC_TO_PLASMA_MEMBRANE, ..., LEF1_UP.V1_UP (8513 total)
+  unique identifiers: HNRNPK, XRCC6, ..., LOC650488 (31847 total)
+  types in collection:
+    geneIdType: SymbolIdentifier (1 total)
+    collectionType: BroadCollection (1 total)
+> names(msig3.1)[1:10]
+ [1] "NUCLEOPLASM"                                
+ [2] "EXTRINSIC_TO_PLASMA_MEMBRANE"               
+ [3] "ORGANELLE_PART"                             
+ [4] "CELL_PROJECTION_PART"                       
+ [5] "CYTOPLASMIC_VESICLE_MEMBRANE"               
+ [6] "GOLGI_MEMBRANE"                             
+ [7] "MITOCHONDRIAL_OUTER_MEMBRANE"               
+ [8] "ORGANELLAR_RIBOSOME"                        
+ [9] "ORGANELLAR_SMALL_RIBOSOMAL_SUBUNIT"         
+[10] "INTRINSIC_TO_ENDOPLASMIC_RETICULUM_MEMBRANE"
+> details(msig3.1[[1]])
+setName: NUCLEOPLASM 
+geneIds: HNRNPK, XRCC6, ..., PRM2 (total: 279)
+geneIdType: Symbol
+collectionType: Broad
+  bcCategory: c5 (GO)
+  bcSubCategory:  CC
+setIdentifier: M12345
+description: Genes annotated by the GO term GO:0005654. That part 
+    of the nuclear content other than the chromosomes or the nucleolus.
+organism: Homo sapiens
+pubMedIds: 
+urls: file://Users/stvjc/Downloads/msigdb_v3.1.xml
+      http://amigo.geneontology.org/cgi-bin/amigo/go.cgi?view=
+           details&search_constraint=terms&depth=0&query=GO:0005654
+contributor: Gene Ontology
+setVersion: 0.0.1
+creationDate: Sat Mar 16 07:45:23 2013
+</pre>
+
+<h3>Pathway and network models</h3>
+
+<p>By model&#39;&#39; here we mean the data structure that represents a
+gene set and relations among genes.  Algebraic graphs (node and
+edge sets) are a basic tool for representation of networks, and Bioconductor&#39;s
+<emph>graph</emph> package endeavors to support fairly rich computations
+on graphs.  The Boost Graph Library of graph algorithms (<a href="http://www.boost.org">www.boost.org</a>)
+is interfaced via package <emph>RBGL</emph>.</p>
+
+<p>The Kyoto Encyclopedia of Genes and Genomes is a familiar repository of
+gene network models.  Some changes to its open status have occurred in the
+past few years, and creation of KEGG.db has been complicated by redistribution
+restrictions.  Note the message after <code>library(KEGG.db)</code>.</p>
+
+<p>However, other forms of access may not be so hampered.  The REST API
+is employed by <emph>KEGGREST</emph> (which will be available in the release coming
+in April 2013).  The <emph>KEGGgraph</emph> package manipulates XML models
+of KEGG pathways, and the two vignettes of that package should be studied
+with care.  Here are some illustrations.</p>
+
+<pre><code class="r">library(KEGGgraph)
+</code></pre>
+
+<pre><code>## Loading required package: XML
+## 
+## Attaching package: &#39;XML&#39;
+## 
+## The following object is masked from &#39;package:graph&#39;:
+## 
+## addNode
+</code></pre>
+
+<pre><code class="r">sfile &lt;- system.file(&quot;extdata/hsa04010.xml&quot;, package = &quot;KEGGgraph&quot;)
+mapksp &lt;- parseKGML(sfile)
+mapksp
+</code></pre>
+
+<pre><code>## KEGG Pathway
+## [ Title ]: MAPK signaling pathway
+## [ Name ]: path:hsa04010
+## [ Organism ]: hsa
+## [ Number ] :04010
+## [ Image ] :http://www.genome.jp/kegg/pathway/hsa/hsa04010.gif
+## [ Link ] :http://www.genome.jp/dbget-bin/show_pathway?hsa04010
+## ------------------------------------------------------------
+## Statistics:
+##  136 node(s)
+##  171 edge(s)
+##  0 reaction(s)
+## ------------------------------------------------------------
+</code></pre>
+
+<pre><code class="r">class(mapksp)
+</code></pre>
+
+<pre><code>## [1] &quot;KEGGPathway&quot;
+## attr(,&quot;package&quot;)
+## [1] &quot;KEGGgraph&quot;
+</code></pre>
+
+<pre><code class="r">nodes(mapksp)[1:2]
+</code></pre>
+
+<pre><code>## $`1`
+## KEGG Node (Entry &#39;1&#39;):
+## ------------------------------------------------------------
+## [ displayName ]: C00338
+## [ Name ]: cpd:C00338
+## [ Type ]: compound
+## [ Link ]: http://www.genome.jp/dbget-bin/www_bget?compound+C00338
+## ------------------------------------------------------------
+## 
+## $`2`
+## KEGG Node (Entry &#39;2&#39;):
+## ------------------------------------------------------------
+## [ displayName ]: RASGRF1, GRF1...
+## [ Name ]: hsa:5923,hsa:5924
+## [ Type ]: gene
+## [ Link ]: http://www.genome.jp/dbget-bin/www_bget?hsa+5923+5924
+## ------------------------------------------------------------
+</code></pre>
+
+<pre><code class="r">edges(mapksp)[1:2]
+</code></pre>
+
+<pre><code>## $relation
+##   KEGG Edge (Type: PPrel):
+## ------------------------------------------------------------
+## [ Entry 1 ID ]: 47
+## [ Entry 2 ID ]: 40
+## [ Subtype ]: 
+##   [ Subtype name ]: activation
+##   [ Subtype value ]: --&gt;
+## ------------------------------------------------------------
+## 
+## $relation
+##   KEGG Edge (Type: PPrel):
+## ------------------------------------------------------------
+## [ Entry 1 ID ]: 46
+## [ Entry 2 ID ]: 40
+## [ Subtype ]: 
+##   [ Subtype name ]: activation
+##   [ Subtype value ]: --&gt;
+## ------------------------------------------------------------
+</code></pre>
+
+<p>The pathway object is not a graph instance <emph>per se</emph>.  We continue:</p>
+
+<pre><code class="r">mapkg = KEGGpathway2Graph(mapksp)
+mapkg
+</code></pre>
+
+<pre><code>## A graphNEL graph with directed edges
+## Number of Nodes = 265 
+## Number of Edges = 876
+</code></pre>
+
+<pre><code class="r">nodes(mapkg)[1:2]
+</code></pre>
+
+<pre><code>## [1] &quot;hsa:5923&quot; &quot;hsa:5924&quot;
+</code></pre>
+
+<p>We can get a rough sense of the topology of the
+pathway with Rgraphviz.</p>
+
+<p>\includegraphics{mapk}</p>
+
+<p>Exercise: Show that the gene with the largest out degree value is MAPK1.</p>
+
+<p>Other pathway catalogs with Bioconductor interfaces are Reactome
+(package <emph>reactome.db</emph>), and cMAP.</p>
+
+<h3>SNPs</h3>
+
+<p>Annotation from NCBI dbSNP is acquired approximately every six months and
+stored in the SNPlocs.Hsapiens.dbSNP.[yyyymmdd] package.</p>
+
+<p>I am not requiring that you download this package as it is very
+large.  If you do it, the following is illustrative.</p>
+
+<pre><code class="r">library(SNPlocs.Hsapiens.dbSNP.20120608)
+</code></pre>
+
+<pre><code class="r">s22 = getSNPlocs(&quot;ch22&quot;, as.GRanges = TRUE)
+length(s22)
+</code></pre>
+
+<pre><code class="r">s22[1:3]
+</code></pre>
+
+<p>It is also possible to query the VCF distributed by
+NCBI using code like the following.  This allows targeted
+retrieval using a GRanges.</p>
+
+<pre><code class="r">dbsvcf = &quot;ftp://ftp.ncbi.nih.gov/snp/organisms/human_9606/VCF/00-All.vcf.gz&quot;
+</code></pre>
+
+<pre><code class="r">getSNPlocs2
+</code></pre>
+
+<pre><code>## function(ch, start=NA, end=NA, vcfpath=dbsvcf) {
+## #
+## # use VCF as backend for getSNPlocs request; ch can be &quot;ch[n]&quot; as previously
+## # with ch=&quot;ch1&quot;, start=400000, end=600000 you get 491 ranges in a few sec over web
+## #
+##  require(Homo.sapiens)
+##  cl = seqlengths(TxDb.Hsapiens.UCSC.hg19.knownGene)
+##  ch = gsub(&quot;ch&quot;, &quot;&quot;, ch)
+##  ch = paste0(&quot;chr&quot;, ch)
+##  if (!ch %in% names(cl)) stop(paste(&quot;can&#39;t get chrlength of &quot;, ch, &quot;in TxDb&quot;))
+##  ln = cl[ch]
+##  sn = gsub(&quot;chr&quot;, &quot;&quot;, ch)
+##  if (is.na(start)) start = 1
+##  if (is.na(end)) end=ln
+##  p = ScanVcfParam(which=GRanges(seqnames=sn, IRanges(start, end)))
+##  ans = scanVcf(dbsvcf, param=p)
+##  gr = ans[[1]]$rowData
+##  gr$REF = ans[[1]]$REF
+##  gr$ALT = ans[[1]]$ALT
+##  gr
+## }
+</code></pre>
+
+<h3>Homology databases</h3>
+
+<p>The inparanoid ortholog databases are the primary
+tool for homology considerations with Bioconductor.
+Because the references have not been updated since 2009,
+it is an open question whether these should be regarded as definitive.
+This code is not evaluated but is provided for illustration of the
+potential usage.</p>
+
+<pre><code class="r">library(hom.Hs.inp.db)
+library(hom.Mm.inp.db)
+library(org.Mm.eg.db)
+</code></pre>
+
+<p>The following function uses old patterns of symbol retrieval
+to map gene symbols between human and mouse.</p>
+
+<pre><code class="r">HMSymMap = function(hsym) {
+    eg = get(hsym, revmap(org.Hs.egSYMBOL))
+    ep = get(eg, org.Hs.egENSEMBLPROT)
+    mps = na.omit(unlist(mget(ep, hom.Hs.inpMUSMU, ifnotfound = NA)))
+    megs = na.omit(unlist(mget(mps, revmap(org.Mm.egENSEMBLPROT), ifnotfound = NA)))
+    unlist(mget(megs, org.Mm.egSYMBOL))
+}
+</code></pre>
+
+<p>Run the function to identify mouse genes homologous to SERPINA3.</p>
+
+<pre><code class="r">HMSymMap(&quot;SERPINA3&quot;)
+</code></pre>
+
+<h3>Other annotation concepts</h3>
+
+<p>The <emph>AnnotationHub</emph>
+is a collection lightly curated R serializations
+of annotation resources.  Its use requires
+internet connectivity; as of Sept. 16 2013
+the following computations occur.</p>
+
+<pre>
+> library(AnnotationHub)
+> ah = AnnotationHub()
+> ah
+class: AnnotationHub 
+length: 8674 
+filters: none 
+hubUrl: http://annotationhub.bioconductor.org/ah 
+snapshotVersion: 2.13; snapshotDate: 2013-06-29
+hubCache: /Users/stvjc/.AnnotationHub 
+> ahn = names(ah)
+> sahn = strsplit(ahn, "\\.")
+> table(sapply(sahn, "[", 1))
+
+     dbSNP    ensembl goldenpath 
+       302       1673       6699 
+> cumsum(.Last.value)
+     dbSNP    ensembl goldenpath 
+       302       1975       8674 
+> ahn[1]
+[1] "dbSNP.organisms.human_9606.VCF.ByChromosome.01.12156.ASW.RData"
+> ahn[303]
+[1] "ensembl.release.69.fasta.ailuropoda_melanoleuca.cdna.Ailuropoda_melanoleuca.ailMel1.69.cdna.all.fa.rz"
+> ahn[1976]
+[1] "goldenpath.ailMel1.database.blastHg18KG_0.0.1.RData"
+> grep("Hmm", ahn, value=TRUE, ignore.case=TRUE)
+ [1] "goldenpath.hg18.database.wgEncodeBroadHmm_0.0.1.RData"
+ [2] "goldenpath.hg19.encodeDCC.wgEncodeRikenCage.wgEncodeRikenCageA549CellPapTssHmm.bedRnaElements_0.0.1.RData"            
+ [3] "goldenpath.hg19.encodeDCC.wgEncodeRikenCage.wgEncodeRikenCageA549CytosolPapTssHmm.bedRnaElements_0.0.1.RData"         
+ # ...
+
+> ah[["dbSNP.organisms.human_9606.VCF.ByChromosome.01.12156.ASW.RData"]]
+Loading required package: VariantAnnotation
+Loading required package: GenomicRanges
+Loading required package: XVector
+Loading required package: Rsamtools
+Loading required package: Biostrings
+
+Attaching package: 'VariantAnnotation'
+
+The following object is masked from 'package:base':
+
+    tabulate
+
+class: CollapsedVCF 
+dim: 124907 49 
+rowData(vcf):
+  GRanges with 5 metadata columns: paramRangeID, REF, ALT, QUAL, FILTER
+info(vcf):
+  DataFrame with 52 columns: AF, NS, RSPOS, RV, VP, GENEINFO, dbSNPBuildID, ...
+info(header(vcf)):
+                Number Type   
+   AF           .      Float  
+   NS           1      Integer
+   RSPOS        1      Integer
+   RV           0      Flag   
+   VP           1      String 
+   GENEINFO     1      String 
+   dbSNPBuildID 1      Integer
+   SAO          1      Integer
+   SSR          1      Integer
+   GMAF         1      Float  
+   WGT          1      Integer
+   VC           1      String 
+   PM           0      Flag   
+   TPA          0      Flag   
+   PMC          0      Flag   
+   S3D          0      Flag   
+   SLO          0      Flag   
+   NSF          0      Flag   
+   NSM          0      Flag   
+   NSN          0      Flag   
+   REF          0      Flag   
+   SYN          0      Flag   
+   U3           0      Flag   
+   U5           0      Flag   
+   ASS          0      Flag   
+   DSS          0      Flag   
+   INT          0      Flag   
+   R3           0      Flag   
+   R5           0      Flag   
+   OTH          0      Flag   
+   CFL          0      Flag   
+   ASP          0      Flag   
+   MUT          0      Flag   
+   VLD          0      Flag   
+   G5A          0      Flag   
+   G5           0      Flag   
+   HD           0      Flag   
+   GNO          0      Flag   
+   KGValidated  0      Flag   
+   KGPhase1     0      Flag   
+   KGPilot123   0      Flag   
+   KGPROD       0      Flag   
+   OTHERKG      0      Flag   
+   PH3          0      Flag   
+   CDA          0      Flag   
+   LSD          0      Flag   
+   MTP          0      Flag   
+   OM           0      Flag   
+   NOC          0      Flag   
+   WTD          0      Flag   
+   NOV          0      Flag   
+   GCF          0      Flag   
+                Description                                       
+   AF           Allele Frequency, for each ALT allele, in the s...
+   NS           Number of Samples With Data                       
+   RSPOS        Chr position reported in dbSNP                    
+   RV           RS orientation is reversed                        
+   VP           Variation Property.  Documentation is at ftp://...   GENEINFO     Pairs each of gene symbol:gene id.  The gene sy...
+   dbSNPBuildID First dbSNP Build for RS                          
+   SAO          Variant Allele Origin: 0 - unspecified, 1 - Ger...
+   SSR          Variant Suspect Reason Code, 0 - unspecified, 1...
+   GMAF         Global Minor Allele Frequency [0, 0.5]; global ...
+   WGT          Weight, 00 - unmapped, 1 - weight 1, 2 - weight...
+   VC           Variation Class                                   
+   PM           Variant is Precious(Clinical,Pubmed Cited)        
+   TPA          Provisional Third Party Annotation(TPA) (curren...
+   PMC          Links exist to PubMed Central article             
+   S3D          Has 3D structure - SNP3D table                    
+   SLO          Has SubmitterLinkOut - From SNP->SubSNP->Batch....
+   NSF          Has non-synonymous frameshift A coding region v...
+   NSM          Has non-synonymous missense A coding region var...
+   NSN          Has non-synonymous nonsense A coding region var...
+   REF          Has reference A coding region variation where o...
+   SYN          Has synonymous A coding region variation where ...
+   U3           In 3' UTR Location is in an untranslated region...
+   U5           In 5' UTR Location is in an untranslated region...
+   ASS          In acceptor splice site FxnCode = 73              
+   DSS          In donor splice-site FxnCode = 75                 
+   INT          In Intron FxnCode = 6                             
+   R3           In 3' gene region FxnCode = 13                    
+   R5           In 5' gene region FxnCode = 15                    
+   OTH          Has other variant with exactly the same set of ...
+   CFL          Has Assembly conflict. This is for weight 1 and...
+   ASP          Is Assembly specific. This is set if the varian...
+   MUT          Is mutation (journal citation, explicit fact): ...
+   VLD          Is Validated.  This bit is set if the variant h...
+   G5A          >5% minor allele frequency in each and all popu...
+   G5           >5% minor allele frequency in 1+ populations      
+   HD           Marker is on high density genotyping kit (50K d...
+   GNO          Genotypes available. The variant has individual...
+   KGValidated  1000 Genome validated                             
+   KGPhase1     1000 Genome phase 1 (incl. June Interim phase 1)  
+   KGPilot123   1000 Genome discovery all pilots 2010(1,2,3)      
+   KGPROD       Has 1000 Genome submission                        
+   OTHERKG      non-1000 Genome submission                        
+   PH3          HAP_MAP Phase 3 genotyped: filtered, non-redundant
+   CDA          Variation is interrogated in a clinical diagnos...
+   LSD          Submitted from a locus-specific database          
+   MTP          Microattribution/third-party annotation(TPA:GWA...
+   OM           Has OMIM/OMIA                                     
+   NOC          Contig allele not present in variant allele lis...
+   WTD          Is Withdrawn by submitter If one member ss is w...
+   NOV          Rs cluster has non-overlapping allele sets. Tru...
+   GCF          Has Genotype Conflict Same (rs, ind), different...
+geno(vcf):
+  SimpleList of length 6: GT, GT2, GT3, GC, GC2, GC3
+geno(header(vcf)):
+       Number Type    Description          
+   GT  1      String  Genotype             
+   GT2 1      String  Second Genotype      
+   GT3 1      String  Third Genotype       
+   GC  1      Integer Genotype Count       
+   GC2 1      Integer Second Genotype Count
+   GC3 1      Integer Third Genotype Count 
+</pre>
+
+</body>
+
+</html>
