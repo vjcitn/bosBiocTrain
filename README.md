@@ -47,7 +47,7 @@ Day 1
  * Lab 3: Statistical explorations of genomic data: interfaces
 for exploratory multivariate analysis, machine learning,
 multiple comparisons, enumerating significantly distinctive
-features, functional interpretation of feature sets
+features, functional interpretation of feature sets.  [Early version.](StatsLab/stats.Rnw.md)
 
 Day 2
 =====
