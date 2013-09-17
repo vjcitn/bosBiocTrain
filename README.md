@@ -16,7 +16,7 @@ Day 1
   Complexity, poor design, batch effects.  Vehicles for
   avoiding some of the pitfalls with Bioconductor.
 
- * [Lab 1: Managing genomic annotation for human and model organisms](AnnotationLab/Anno.Rnw.md)
+ * [Lab 1: Managing genomic annotation for human and model organisms](AnnotationLab/anno.Rnw.md)
    + [_OrganismDbi_](http://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html), `select`
    + [_GenomicRanges_](http://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html) and see [the recent PLoS CompBio paper](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118)
 
