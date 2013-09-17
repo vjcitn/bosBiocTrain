@@ -1,0 +1,218 @@
+
+\section{Preliminaries with R and statistical analysis}
+
+
+\subsection{Statistical analysis of some small datasets}
+
+\subsubsection{Ambiguities of simple statistical summaries}
+
+The \texttt{anscombe} data are specially constructed to
+illustrate limitations of standard statistical summaries.
+
+<<doan>>=
+data(anscombe)
+anscombe[1:3,]
+<<dof,fig=TRUE>>=
+par(mfrow=c(2,2))
+for (i in 1:4) plot(anscombe[,i], anscombe[,i+4],
+  xlab=paste("x", i, sep=""), ylab=paste("y", i, sep=""))
+@
+
+Show that the correlation and (simple linear) regression coefficients relating
+$y_i$ to $x_i$, $i = 1, \ldots, 4$ are identical to 3 decimal places.
+Use quadratic regression to model the second configuration and
+comment on the distribution of residuals.
+
+\subsubsection{Multivariate analysis of plant anatomy}
+
+\subsubsection*{Three visualizations of iris flower measurements}
+
+Fisher's iris data are readily available.  The scatterplot
+matrix is easily formed and suggests that the measurements
+can be used to discriminate species.
+<<lki>>=
+head(iris)
+<<lkif1,fig=TRUE>>=
+pairs(iris[,-5], col=factor(iris[,5]), pch=19)
+@
+
+It is not straightforward to annotate this plot.  With some
+reshaping of the data, \textit{ggplot2} may be more
+communicative.
+<<dow,echo=FALSE>>=
+oopt = options()
+owidth = getOption("width")
+options(width=45)
+<<dogg,fig=TRUE>>=
+irsep = cbind(iris[,c(1,2,5)],feat="Sepal")
+irpet = cbind(iris[,c(3,4,5)],feat="Petal")
+names(irsep)[1:2] = c("Length", "Width")
+names(irpet)[1:2] = c("Length", "Width")
+ir = rbind(irsep, irpet)
+head(ir)
+library(ggplot2)
+ggplot(ir) + geom_point(aes(x=Length, y=Width, colour=paste(Species, feat),
+ shape=paste(Species, feat)))
+@
+
+For a final view of the data, we will reshape the
+data frame and use \textit{ggplot2} again.
+
+<<domel,fig=TRUE>>=
+library(reshape2)
+miris = melt(iris)
+ggplot(miris) + geom_boxplot(aes(x=variable,
+   y=value, colour=Species))
+@
+
+\subsubsection*{Categorical data analysis}
+
+It is sometimes useful from an interpretive perspective
+to consider discretizations of measured quantities.
+For example, in the iris data, we may define thresholds
+for long, short and intermediate petal lengths.  There
+is an ad hoc aspect to choosing the thresholds, and in some
+cases interpretation may be sensitive in
+a substantively important way to details of the choice.
+
+Relationships among categorical variables
+can be described using statistical
+analysis of contingency tables.  Observations are
+cross-classified according to categories occupied
+by different attributes.  The discipline of loglinear
+modeling establishes likelihood-based procedures
+for comparing different formal models for
+relationships among variables.  A 
+hypothesis that can be tested in loglinear modeling of
+variables X, Y, Z is ``X is conditionally independent
+of Y given Z''.  Networks of relationships can often
+be usefully characterized by elaborating statements of
+this type, and the discipline of graphical modeling
+pursues this idea.
+
+To illustrate this on a very small scale, we will form tertiles for the
+iris sepal width measurements and test for independence
+of this discretized score with iris species.
+The mosaic plot can give an indication of goodness of fit
+for a specific loglinear model for a contingency table.
+
+Exercise:
+Check the documentation of the
+functions used here, focusing on the interpretation of the margin
+parameter, and develop more comprehensive models for
+discretized versions of the iris measurements.
+
+<<doc,fig=TRUE>>=
+tertiles = function(x) cut(x, quantile(x, c(0,1/3,2/3,1)))
+ti <- with(iris, table(SepWidTert=tertiles(Sepal.Width), Species))
+ti
+mosaicplot(ti, margin=list(1,2), shade=TRUE)
+chisq.test(ti)
+chisq.test(ti[,-1])
+@
+
+\subsubsection*{Principal components}
+
+The simplest approach works from a matrix representation of the numerical
+data.
+<<getmat>>=
+di = data.matrix(iris[,1:4])
+pdi = prcomp(di)
+pairs(pdi$x, col=factor(iris$Species))
+@
+
+Interpret:
+<<domo,fig=TRUE>>=
+pairs(pdi$x, col=factor(iris$Species))
+cor(pdi$x[,1], iris[,1:4])
+cor(pdi$x[,2], iris[,1:4])
+@
+
+
+\subsubsection{Machine learning: unsupervised}
+
+We'll use hierarchical clustering to look for
+structure in the iris measurements.
+<<dost,fig=TRUE>>=
+c1 = hclust(dist(di))
+plot(c1)
+@
+
+Choice of features and distance for comparing
+and clustering objects are key determinants of
+results of cluster analyses.  The exercises
+involve assessment of distances used in this simple
+hierarchical clustering.  Consider how to assess the
+sensitivity of the cluster assignments to
+choice of feature set and distance function.
+
+Exercise:  Evaluate \texttt{names(c1)}.  Explain
+the value of \texttt{c1\$merge[1,]} (consult the
+help page for \texttt{hclust}).
+
+Explain:
+\begin{verbatim}
+> which(c1$height>.25)[1]
+[1] 44
+> c1$merge[44,]
+[1] -69 -88
+> dist(iris[c(69,88),-5])
+          69
+88 0.2645751
+\end{verbatim}
+
+
+\subsubsection{Machine learning: supervised}
+
+We'll take a training sample from the iris data,
+use ``random forests'' to generate a prediction
+procedure, and check concordance of predictions
+and given labels for a test set.
+
+<<dosa>>=
+set.seed(1234)
+s1 = sample(1:nrow(iris), size=nrow(iris)*.75, replace=FALSE)
+train = iris[s1,]
+test = iris[-s1,]
+library(randomForest)
+rf1 = randomForest(Species~., data=train)
+rf1
+@
+
+Here we will use a generic `predict' method with
+\texttt{newdata} argument.
+<<dopred>>= 
+table(predict(rf1, newdata=test), test$Species)
+@
+
+\textbf{Exercise:} The misclassified test cases must be 'hard'.
+Write the R code to find them and examine the raw values in relation
+to the correctly classified cases (perhaps summarized statistically).
+
+<<dow2,echo=FALSE>>=
+options(width=owidth)
+@
+
+\subsection{Data input}
+
+Various bioinformatic workflows generate data in various
+formats.  A key hurdle for analysts is conversion from the
+workflow export into analyzable structures.  Bioconductor
+addresses lots of such problems.  
+
+For data of modest volume "CSV" is a common hub format -- scientists
+often use MS Excel to examine and manage data, and it is easy
+to export Excel spreadsheets into textual comma-separated values.
+R's \texttt{read.csv} will handle any genuine CSV file.
+
+The ``data import and export'' manual at the R project web site
+should be carefully studied.  We will deal with specific problems
+throughout the course.
+
+For genomic data, particularly annotations (browser tracks)
+the \textit{rtracklayer} package performs many useful tasks
+of import and export.
+
+
+@
+
