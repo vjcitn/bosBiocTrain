@@ -6,7 +6,9 @@ Training materials for Bioconductor courses in Longwood area, Boston MA
 October 10-11 2013, Fenway Room, Inn at Longwood
 432 Longwood Ave Boston MA 02115
 
-To register, fill out [this form](utils/form13b.pdf) and send to me as indicated.
+To register, fill out [this form](utils/form13b.pdf) (you
+can 'view raw' and it will be downloaded, or just right
+click and save link)  and send to me as indicated.
 
 In what follows, _italics_ denote Bioconductor packages,
 and `sansserif` tokens denote functions or classes
