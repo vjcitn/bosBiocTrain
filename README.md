@@ -3,12 +3,19 @@ bosBiocTrain
 
 Training materials for Bioconductor courses in Longwood area, Boston MA
 
-October 10-11 2013, Fenway Room, Inn at Longwood
-432 Longwood Ave Boston MA 02115
+<code>
+THIS COURSE IS CANCELED.  ANOTHER COURSE WILL BE ANNOUNCED.  THESE MATERIALS
+WILL CONTINUE TO BE DEVELOPED FOR PUBLIC USE.
 
-To register, fill out [this form](utils/form13b.pdf) (you
-can 'view raw' and it will be downloaded, or just right
-click and save link)  and send to me as indicated.
+<code>
+CANCELED October 10-11 2013, Fenway Room, Inn at Longwood
+CANCELED 432 Longwood Ave Boston MA 02115
+
+<code>
+CANCELED To register, fill out [this form](utils/form13b.pdf) (you
+CANCELED can 'view raw' and it will be downloaded, or just right
+CANCELED click and save link)  and send to me as indicated.
+</code>
 
 In what follows, _italics_ denote Bioconductor packages,
 and `sansserif` tokens denote functions or classes
